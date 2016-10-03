@@ -1,28 +1,21 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Tentacle
+======
+Tentacle creates the pipes to sell anywhere on the web, w/ inventory synced. Sell through a tweet or a photo...it's up to you.
+Product Roadmap
+------
+Features currently under construction include:
+1. Login
+  * Users connect via Stripe(Connect?)/Shopify
+2. Dynamically manages Product/SKUs and sends to Stripe
+  * CRUD products and SKU attributes (sizes, permalinks, images, etc.)
+3. Dynamically manages Orders and Fulfillment status via webhooks (cross-update order/fulfillment status)
+  * Accept webhook data from Stripe on Order status and use to CRUD Orders/Fulfillments on Shopify
+  * Accept webhook data from Shopify on Fullfillment status and use to update Order status on Stripe (paid, fulfilled, cancelled, returned)
+  * Setup dynamic creation of webhooks using Shopify Webhook API
+  * Possible to set Stripe Webhook settings via an API or must be done by user manually?
+4. Analytics
+  * For users
+    + Order data from different sell-through apps
+    + Keen vs Reflect?
+  * For site
+    + Segment vs. Keen?
